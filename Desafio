@@ -1,0 +1,55 @@
+//Desafio: Gerenciando uma Lista de Tarefas (JavaScript)
+
+
+//01
+
+let tarefas = ['Estudar', 'Lavar a louça', 'Fazer exercícios'];
+console.log(tarefas)
+
+tarefas.push('comprar pão', 'ler um livro')
+console.log(tarefas)
+
+//02
+
+let tarefas = ['Estudar', 'Lavar a louça', 'Fazer exercícios'];
+
+const ultimaTarefa = tarefas.pop();
+
+console.log(ultimaTarefa)
+console.log(tarefas)
+
+//03
+
+let tarefas = ['Estudar', 'Lavar a louça', 'Fazer exercícios'];
+
+tarefas.unshift('acordar cedo', 'tomar café');
+console.log(tarefas);
+
+//04
+
+let tarefas = ['Estudar', 'Lavar a louça', 'Fazer exercícios'];
+
+const primeiraTarefa = tarefas.shift()
+console.log(primeiraTarefa)
+console.log(tarefas)
+
+//05 splice
+
+let tarefas = ['Estudar', 'Lavar a louça', 'Fazer exercícios'];
+
+tarefas.splice(0, 2, 'fazer café da manhã', 'organizar a mesa')
+console.log(tarefas)
+
+//06
+
+let tarefas = ['Estudar', 'Lavar a louça', 'Fazer exercícios'];
+
+let tarefasSelecionadas = tarefas.slice(1, 3);
+console.log(tarefasSelecionadas);
+
+//07
+
+let tarefas = ['Estudar', 'Lavar a louça', 'Fazer exercícios'];
+
+let tarefasCompletas = tarefas.concat('ver um filme', 'descansar')
+console.log(tarefasCompletas)
