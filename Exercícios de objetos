@@ -1,0 +1,38 @@
+//exercícios de objeto:
+
+//01
+
+const carro = {
+    marca: 'Toyota',
+    modelo: 'Corolla',
+    ano: 2022
+};
+
+console.log(carro.marca);   
+console.log(carro.modelo);  
+console.log(carro.ano);    
+
+//02
+
+const usuario = {
+    nome: "Fernanda",
+    email: "fernanda@email.com",
+    idade: 25
+};
+
+// Removendo a propriedade 'email'
+delete usuario.email;
+
+console.log(usuario);
+
+//03
+
+const pessoa = {
+    nome: "Carlos",
+    idade: 29
+};
+
+// Alterar a idade
+pessoa.idade = 31;
+
+console.log(pessoa.idade);  // Saída: 31 
