@@ -1,0 +1,201 @@
+// estudos prova de desenvolvimento web
+
+lista de exercícios:
+
+//01- soma
+
+function somar(a, b) {
+  return a + b;
+}
+
+console.log(somar(5, 3)); // 8
+
+//-------
+
+//02- par ou ímpar
+
+function parOuImpar(numero) {
+return numero % 2 === 0 ? 'Par' : 'Ímpar';
+}
+console.log(parOuImpar(4)); // 'Par'
+
+//-------
+
+//03 conversão
+
+function converterMedidas(metros) {
+  let centimetros = metros * 100;
+  let milimetros = metros * 1000;
+
+  console.log(`${metros} metro(s) equivalem a:`);
+  console.log(`${centimetros} centímetros`);
+  console.log(`${milimetros} milímetros`);
+}
+
+converterMedidas(2);
+
+//----------
+
+//04 adicionar itens no final do array
+
+const frutas = ['maçã', 'banana'];
+
+frutas.push('laranja', 'uva');
+
+console.log(frutas); // ['maçã', 'banana', 'laranja', 'uva']
+
+//----------
+
+//05 remover o último item do array e chama-lo
+
+const numeros = [1, 2, 3, 4, 5];
+
+const ultimoNumero = numeros.pop();
+
+console.log(ultimoNumero); // 5
+console.log(numeros); // [1, 2, 3, 4]
+
+//----------
+
+//06 remover o primeiro item do array
+
+const cores = ['vermelho', 'azul', 'verde'];
+
+const primeiraCor = cores.shift();
+
+console.log(primeiraCor); // 'vermelho'
+console.log(cores); // ['azul', 'verde']
+
+//-----------
+
+//07 adicionar elementos no ínicio do array 
+
+const animais = ['cachorro', 'gato'];
+
+animais.unshift('elefante', 'leão');
+
+console.log(animais); // ['elefante', 'leão', 'cachorro', 'gato']
+
+//-------------
+
+//08 shift para remover, unshift para adicionar
+
+const numeros = [10, 20, 30, 40, 50];
+console.log(numeros)
+
+// Remover os dois primeiros elementos
+numeros.shift(); // Remove 10
+numeros.shift(); // Remove 20
+
+// Adicionar 5 e 15 nas primeiras posições
+numeros.unshift(5, 15);
+
+console.log(numeros); // [5, 15, 30, 40, 50]
+
+//-------------
+
+//09 slice => breve explicação pq não entendi essa merda 
+// ele serve para copiar uma parte do array sem  modificar
+//primeiro elemento que você quer pegar (a contagem começa de 0). no caso 'a'
+//último elemento que você quer pegar +1 (ou seja, o fim não é incluído no novo array). no caso 'e'
+//// Queremos pegar do índice 1 ao índice 3 (lembrando que o 4 não será incluído)
+const novasLetras = letras.slice(1, 4);
+
+const letras = ['a', 'b', 'c', 'd', 'e'];
+
+// Usando o método slice() para pegar uma parte do array
+const novasLetras = letras.slice(1, 4);
+
+console.log(novasLetras); // ['b', 'c', 'd']
+
+//---------------
+
+//10 concat => junta 2 ou mais arrays em 1 só
+
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+
+// Usando o método concat() para combinar os arrays
+const arrayCombinado = array1.concat(array2);
+
+console.log(arrayCombinado); // [1, 2, 3, 4, 5, 6]
+
+//------------------
+
+//11 template string => `Olá, ${nome}!` ele usa craze envés de virgula.
+
+function saudacao(nome) {
+  return `Olá, ${nome}!`;
+}
+
+console.log(saudacao("Carlos")); // "Olá, Carlos!"
+console.log(saudacao("Ana"));    // "Olá, Ana!"
+
+//-----------------
+
+//12 
+
+//var => O escopo de uma variável é o lugar onde ela pode ser acessada. O escopo do var é global ou local à função onde ele foi declarado. Isso significa que:
+
+//Se você declarar uma variável com var fora de qualquer função, ela será global.
+
+//Se você declarar dentro de uma função, ela será acessível apenas dentro dessa função.
+
+function exemplo() {
+  var idade = 25; // 'idade' é uma variável local à função
+  console.log(idade); // Vai funcionar aqui
+}
+
+exemplo(); // Vai imprimir: 25
+console.log(idade); // ERRO! 'idade' não existe fora da função
+
+
+
+//let => Escopo: O let tem escopo de bloco, ou seja, só é acessível dentro do bloco de código onde foi declarado (como dentro de um if, for, etc.).
+
+//Re-declaração: Você não pode re-declarar uma variável dentro do mesmo bloco.
+
+//Hoisting: A declaração da variável é levantada, mas ela não pode ser usada antes de ser declarada.
+
+if (true) {
+  let nome = "Ana"; // 'nome' só pode ser acessado dentro deste bloco
+  console.log(nome); // Vai funcionar aqui, vai imprimir: "Ana"
+}
+
+console.log(nome); // ERRO! 'nome' não pode ser acessado fora do bloco
+
+
+//const
+Escopo: Assim como o let, o const tem escopo de bloco, ou seja, só pode ser acessado dentro do bloco de código onde foi declarado.
+
+Reatribuição: A variável const não pode ser reatribuída. Ou seja, uma vez que você atribui um valor, não pode alterá-lo.
+
+Re-declaração: Você não pode re-declarar a variável dentro do mesmo bloco, assim como o let.
+
+Hoisting: O const sofre hoisting, mas você não pode acessar a variável antes de sua declaração.
+
+Objetos/Arrays: Mesmo com const, você pode alterar o conteúdo de objetos ou arrays, mas não pode reatribuir o objeto ou array inteiro.
+
+
+//13 Se você tentar acessar uma variável que não foi declarada em nenhum lugar, o JavaScript vai lançar um erro dizendo que a variável é indefinida.
+
+
+//14 O operador typeof em JavaScript é usado para verificar o tipo de uma variável ou valor. Ele retorna uma string que descreve o tipo do operando.
+
+let nome = "Ana";
+let idade = 25;
+let isAluno = true;
+let frutas = ["maçã", "banana", "laranja"];
+let pessoa = { nome: "Carlos", idade: 30 };
+let saudacao = function() {
+  console.log("Olá!");
+};
+
+console.log(typeof nome);       // "string"
+console.log(typeof idade);      // "number"
+console.log(typeof isAluno);    // "boolean"
+console.log(typeof frutas);     // "object" (lembrando que arrays são objetos em JavaScript)
+console.log(typeof pessoa);     // "object"
+console.log(typeof saudacao);   // "function"
+console.log(typeof null);       // "object" (isso é um comportamento peculiar do JavaScript)
+console.log(typeof undefined);  // "undefined"
