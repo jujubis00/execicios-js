@@ -1,0 +1,59 @@
+<!--Peça ao usuário para digitar um número inteiro e exiba tabuada (1 a 10) do
+número informado pelo usuário.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabuada</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+    input, button {
+      font-size: 16px;
+      padding: 8px;
+    }
+    #resultado {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Gerador de Tabuada</h2>
+
+  <input type="number" id="numero" placeholder="Digite um número inteiro">
+  <button onclick="gerarTabuada()">Gerar Tabuada</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function gerarTabuada() {
+      const input = document.getElementById("numero");
+      const resultado = document.getElementById("resultado");
+      const valor = parseInt(input.value);
+
+      // Limpa resultado anterior
+      resultado.innerHTML = "";
+
+      if (isNaN(valor)) {
+        resultado.innerHTML = "❗ Por favor, digite um número inteiro válido.";
+        return;
+      }
+
+      // Gera e exibe a tabuada
+      for (let i = 1; i <= 10; i++) {
+        const linha = `${valor} × ${i} = ${valor * i}`;
+        const p = document.createElement("p");
+        p.textContent = linha;
+        resultado.appendChild(p);
+      }
+    }
+  </script>
+
+</body>
+</html>

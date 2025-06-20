@@ -1,0 +1,53 @@
+<!--Usando eventos de teclado, mostre na tela qual foi a última tecla digitada em
+um campo de texto.
+a. Crie um input type="text" com id="inputTecla".
+b. Crie um <span> com id="teclaPressionada".
+c. Use addEventListener("keydown", function(e) {...}).
+d. Dentro da função, use e.key para capturar a tecla pressionada.
+e. Exiba o valor dentro do span.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Tecla Pressionada</title>
+  <style>
+    #inputTecla {
+      padding: 10px;
+      font-size: 18px;
+      width: 250px;
+    }
+
+    #teclaPressionada {
+      font-weight: bold;
+      color: blue;
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Digite algo no campo abaixo</h1>
+
+  <!-- a. Campo de texto -->
+  <input type="text" id="inputTecla" placeholder="Digite aqui...">
+
+  <p>Última tecla pressionada: <span id="teclaPressionada">Nenhuma</span></p>
+
+  <script>
+    // b. Seleciona os elementos
+    const input = document.getElementById("inputTecla");
+    const span = document.getElementById("teclaPressionada");
+
+    // c. Adiciona o evento keydown
+    input.addEventListener("keydown", function(e) {
+      // d. Captura a tecla pressionada
+      const tecla = e.key;
+
+      // e. Exibe no span
+      span.textContent = tecla;
+    });
+  </script>
+
+</body>
+</html>

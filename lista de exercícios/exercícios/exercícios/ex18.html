@@ -1,0 +1,47 @@
+<!--Ao clicar em um botão, a cor de fundo dele muda aleatoriamente.
+a. Crie um botão com id="btnCor".
+b. Use JavaScript para selecionar esse botão com getElementById.
+c. Adicione um ouvinte de evento click com addEventListener.
+d. Dentro do evento, crie uma lista de cores (array).
+e. Sorteie uma cor aleatória e aplique no style.backgroundColor do botão.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Botão com Cor Aleatória</title>
+  <style>
+    #btnCor {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Botão que muda de cor</h1>
+  <button id="btnCor">Clique para mudar de cor</button>
+
+  <script>
+    // b. Seleciona o botão pelo ID
+    const botao = document.getElementById("btnCor");
+
+    // c. Adiciona o ouvinte de clique
+    botao.addEventListener("click", function () {
+      // d. Lista de cores
+      const cores = ["red", "blue", "green", "orange", "purple", "pink", "yellow", "cyan"];
+
+      // e. Sorteia uma cor aleatória
+      const indice = Math.floor(Math.random() * cores.length);
+      const corSorteada = cores[indice];
+
+      // Aplica a cor ao fundo do botão
+      botao.style.backgroundColor = corSorteada;
+    });
+  </script>
+
+</body>
+</html>
