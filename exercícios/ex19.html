@@ -1,0 +1,51 @@
+<!--Utilizando o evento de clique, mostre quantas vezes um botão foi clicado
+a. Crie um botão com id="btnContador" no arquivo html
+b. Crie um <span> com id="contador" para mostrar o número de cliques.
+c. No JavaScript, declare uma variável cliques = 0.
+d. Use addEventListener("click", ...) no botão.
+e. A cada clique, incremente cliques e atualize o conteúdo do span.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contador de Cliques</title>
+  <style>
+    #btnContador {
+      padding: 15px 30px;
+      font-size: 18px;
+      cursor: pointer;
+    }
+
+    #contador {
+      font-weight: bold;
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contador de Cliques</h1>
+
+  <!-- a. Botão -->
+  <button id="btnContador">Clique aqui</button>
+
+  <p>Você clicou <span id="contador">0</span> vezes.</p>
+
+  <script>
+    // c. Variável para contar cliques
+    let cliques = 0;
+
+    // b. Seleciona elementos
+    const botao = document.getElementById("btnContador");
+    const spanContador = document.getElementById("contador");
+
+    // d. Adiciona o evento de clique
+    botao.addEventListener("click", function () {
+      cliques++;
+      spanContador.textContent = cliques;
+    });
+  </script>
+
+</body>
+</html>

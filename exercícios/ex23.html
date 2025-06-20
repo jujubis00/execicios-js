@@ -1,0 +1,59 @@
+<!--Faça um programa que contenha um botão que só fica habilitado se um
+checkbox estiver marcado.
+a. Crie uma checkbox com id="checkPermissao".
+b. Crie um botão com id="btnEnviar" e disabled.
+c. Use addEventListener("change", ...) na checkbox.
+d. Verifique se checkbox.checked é true ou false.
+e. Altere a propriedade disabled do botão com base nisso.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Permissão com Checkbox</title>
+  <style>
+    label {
+      font-size: 18px;
+    }
+    #btnEnviar {
+      margin-top: 15px;
+      padding: 10px 25px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Confirme para habilitar o envio</h2>
+
+  <!-- a. Checkbox -->
+  <label>
+    <input type="checkbox" id="checkPermissao">
+    Aceito os termos de uso
+  </label>
+
+  <br><br>
+
+  <!-- b. Botão inicialmente desabilitado -->
+  <button id="btnEnviar" disabled>Enviar</button>
+
+  <script>
+    // Seleciona os elementos
+    const checkbox = document.getElementById("checkPermissao");
+    const botao = document.getElementById("btnEnviar");
+
+    // c. Adiciona o evento de mudança na checkbox
+    checkbox.addEventListener("change", function () {
+      // d. Verifica se está marcada
+      if (checkbox.checked) {
+        // e. Habilita o botão
+        botao.disabled = false;
+      } else {
+        // e. Desabilita o botão
+        botao.disabled = true;
+      }
+    });
+  </script>
+
+</body>
+</html>

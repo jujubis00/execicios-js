@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Jogo de Adivinhação</title>
+</head>
+<body>
+  <h1>Jogo: Adivinhe o número de 1 a 10</h1>
+  
+  <input type="number" id="palpite" placeholder="Digite seu palpite" min="1" max="10" />
+  <button onclick="verificarPalpite()">Tentar</button>
+
+  <p id="mensagem"></p>
+
+  <script>
+    // Gera um número aleatório de 1 a 10
+    const numeroSecreto = Math.floor(Math.random() * 10) + 1;
+    console.log("Número sorteado (debug):", numeroSecreto); // pode remover depois
+
+    function verificarPalpite() {
+      const palpite = parseInt(document.getElementById("palpite").value);
+      const mensagem = document.getElementById("mensagem");
+
+      if (isNaN(palpite) || palpite < 1 || palpite > 10) {
+        mensagem.textContent = "Por favor, digite um número de 1 a 10.";
+        return;
+      }
+
+      if (palpite === numeroSecreto) {
+        mensagem.textContent = "Parabéns! Você acertou! 🎉";
+      } else {
+        mensagem.textContent = "Errou! Tente novamente.";
+      }
+    }
+  </script>
+</body>
+</html>

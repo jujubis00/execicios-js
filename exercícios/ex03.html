@@ -1,0 +1,32 @@
+//Exibe um número na tela. O usuário pode aumentar ou diminuir o valor
+//usando botões.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contador</title>
+</head>
+<body>
+  <h1 id="contador">0</h1>
+  <button onclick="aumentar()">Aumentar</button>
+  <button onclick="diminuir()">Diminuir</button>
+
+  <script>
+    let numero = 0;
+
+    function atualizarTela() {
+      document.getElementById("contador").textContent = numero;
+    }
+
+    function aumentar() {
+      numero++;
+      atualizarTela();
+    }
+
+    function diminuir() {
+      numero--;
+      atualizarTela();
+    }
+  </script>
+</body>
+</html>

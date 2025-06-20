@@ -1,0 +1,36 @@
+<!--Faça um parágrafo desaparecer quando o usuário der dois cliques sobre ele.
+a. Crie um parágrafo com id="paragrafo".
+b. Use addEventListener("dblclick", ...).
+c. Na função do evento, altere style.display = "none" para esconder o
+elemento.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Duplo Clique no Parágrafo</title>
+  <style>
+    #paragrafo {
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- a. Parágrafo com ID -->
+  <p id="paragrafo">Dê dois cliques neste texto para escondê-lo.</p>
+
+  <script>
+    // b. Seleciona o parágrafo
+    const paragrafo = document.getElementById("paragrafo");
+
+    // c. Adiciona evento de duplo clique para esconder
+    paragrafo.addEventListener("dblclick", function () {
+      paragrafo.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>
