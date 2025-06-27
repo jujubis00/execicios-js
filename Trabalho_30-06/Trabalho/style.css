@@ -1,0 +1,76 @@
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background: url('hayao miyazaki kiki GIF.gif') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  margin: 0;
+}
+
+/* Container principal com fundo branco translúcido */
+.container {
+  background: rgba(252, 190, 190, 0.9);
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #ccc;
+  width: 300px;
+}
+
+/* Área de entrada com espaçamento entre input e botão */
+.input-area {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Estilo do campo de texto */
+input[type="text"] {
+  flex: 1;
+  padding: 5px;
+  font-size: 14px;
+}
+
+/* Estilo do botão principal */
+button {
+  padding: 5px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #cf7272;
+}
+
+/* Lista de itens */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+/* Cada item da lista */
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #cf7272;
+  cursor: pointer;
+}
+
+/* Estilo para item marcado como "comprado" */
+li.comprado {
+  text-decoration: line-through;
+  color: rgb(168, 74, 74);
+}
+
+/* Botão de remover item */
+.remove-btn {
+  background: rgb(146, 50, 50);
+  color: white;
+  border: none;
+  padding: 2px 6px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 3px;
+  font-size: 12px;
+}
